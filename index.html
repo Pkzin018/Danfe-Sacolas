@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DANFE SACOLAS...</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+  color: white;
+  flex-direction: column;
+}
+
+#loading {
+  font-size: 22px;
+  margin-bottom: 20px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.3; }
+}
+
+img {
+  display: none;
+  max-width: 95%;
+  max-height: 95%;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loading">Carregando DANFE...</div>
+
+<img id="meme" src="meme.png">
+
+<script>
+setTimeout(() => {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("meme").style.display = "block";
+}, 2000);
+</script>
+
+</body>
+</html>
